@@ -1,0 +1,5 @@
+<div class="flex max-w-full gap-2 overflow-x-auto">
+    <a href="{{ route('hris.calendar.index', ['organization' => $organization->slug]) }}" class="shrink-0 rounded-full px-4 py-2 text-[13px] font-semibold transition {{ request()->routeIs('hris.calendar.index') ? 'bg-[#252421] text-white' : 'border border-black/[0.07] bg-white text-[#77746d] hover:bg-[#f6f5f1]' }}">{{ __('hris.calendar.calendar') }}</a>
+    <a href="{{ route('hris.holidays.index', ['organization' => $organization->slug]) }}" class="shrink-0 rounded-full px-4 py-2 text-[13px] font-semibold transition {{ request()->routeIs('hris.holidays.*') ? 'bg-[#252421] text-white' : 'border border-black/[0.07] bg-white text-[#77746d] hover:bg-[#f6f5f1]' }}">{{ __('hris.calendar.holidays') }}</a>
+    <a href="{{ route('hris.calendar.annual-leave.index', ['organization' => $organization->slug]) }}" class="shrink-0 rounded-full px-4 py-2 text-[13px] font-semibold transition {{ request()->routeIs('hris.calendar.annual-leave.*') ? 'bg-[#252421] text-white' : 'border border-black/[0.07] bg-white text-[#77746d] hover:bg-[#f6f5f1]' }}">{{ __('hris.calendar.annual_leave_schedule') }}</a>
+</div>
